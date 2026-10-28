@@ -1,0 +1,13 @@
+global:
+  scrape_interval:     36s
+
+scrape_configs:
+  - job_name: "node"
+    static_configs:
+    - targets: ["node-exporter:9100"]
+
+remote_write:
+  - url: 'https://prometheus-prod-39-prod-eu-north-0.grafana.net/api/prom/push'
+    basic_auth:
+      username: '3702205'
+      password: 'glc_eyJvIjoiMTk1OTE2OSIsIm4iOiJzdGFjay0xODg4OTkxLWFsbG95LWhvbWV3b3JrLXRva2VuIiwiayI6ImU4RjJnNFg4dDMyZ0NaMjFPdE14OFc0ViIsIm0iOnsiciI6InByb2QtZXUtbm9ydGgtMCJ9fQ=='
